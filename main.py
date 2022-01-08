@@ -16,10 +16,9 @@ driver.get("https://www.facebook.com/189917291362525/posts/1608121936208713/")
 
 _input = input("Press enter after replay box clicked")
 
-
 while True:
     time = datetime.datetime.now()
-    if 7 <= time.hour < 12 or 13 <= time.hour < 17 or 18 <= time.hour < 20:
+    if 7 <= time.hour < 12 or 13 <= time.hour < 17 or 18 <= time.hour <= 21:
         try:
             box = "//*[@aria-label='Reply to Shaked Levy']"
             replyBox = driver.find_element(By.XPATH, box)
